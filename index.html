@@ -4,6 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+            fontFamily: {
+              sans: ["'Helvetica Neue LT W05_55 Roman'"],
+              "goth-xlight": "'Gotham Xtra Light'",
+              "goth-light": "'Gotham Light'",
+              "goth-book": "'Gotham Book'",
+              "goth-medium": "'Gotham Medium'",
+              "goth-bold": "'Gotham Bold'",
+              "hel-medium": "'Helvetica Neue LT W05_65 Medium'",
+              "hel-light": "'Helvetica Neue LT W05_45 Light'",
+              "hel-bold": "'Helvetica Neue LT W05_75 Bold'",
+            },
+          },
+        },
+      };
+    </script> -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css"
       rel="stylesheet"
@@ -34,8 +56,8 @@
         <div class="flex absolute left-0 items-center w-full -bottom-8">
           <a href="" class="mx-auto">
             <img
-              src="./source/images/buttons/watch-the-video.svg"
-              alt="Watch the Video"
+              src="/source/images/buttons/watch-the-video.svg"
+              alt="Watch the Video test"
             />
           </a>
         </div>
@@ -48,7 +70,7 @@
         class="absolute w-auto min-w-full min-h-full max-w-none"
       >
         <source
-          src="./source/videos/attendee_journey_background.mp4"
+          src="/source/videos/attendee_journey_background.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
@@ -57,12 +79,10 @@
       <div
         class="absolute flex bottom-0 bg-black w-full text-white font-hel-light text-xl py-5 px-8 bg-opacity-80"
       >
-        <div
-          class="max-w-7xl flex flex-col bottom-10 sm:flex-row mx-auto items-center"
-        >
+        <div class="max-w-7xl flex mx-auto items-center">
           <div class="text-center w-96">
             <img
-              src="./source/images/common/mta_abbrev_corner.svg"
+              src="/source/images/common/mta_abbrev_corner.svg"
               alt="MTA"
               class=""
             />
@@ -70,9 +90,7 @@
               Transforming Experience
             </div>
           </div>
-          <div
-            class="flex items-center text-center sm:text-left pl-5 pt-8 sm:pt-0"
-          >
+          <div class="flex items-center pl-5">
             We are a WBENC-certified, full-service corporate event planning
             company in business since 1997. We deliver exceptional experiences
             for face-to-face, virtual and hybrid meetings that exceed
@@ -85,7 +103,7 @@
 
     <!-- Second section Highly Quotable-->
     <section class="mb-3">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center">
         <div
           class="bg-gray-50 p-8 rounded-sm border border-gray-100 relative text-center"
         >
@@ -98,10 +116,12 @@
             Mta Is
             <strong class="font-goth-book">Highly Quotable</strong>
           </div>
-          <div class="p-12 lg:text-5xl text-2xl text-center mb-4">
-            <i
+          <div
+            class="p-12 lg:text-5xl text-2xl text-center mb-4 tracking-tighter flex justify-center mt-8"
+          >
+            <i class="font-hel-light"
               >I didn&apos;t know you <br />
-              spelled <strong>magic</strong> M-T-A</i
+              spelled <span class="font-hel-bold">magic</span> M-T-A</i
             >
           </div>
           <img
@@ -109,11 +129,13 @@
             alt="quote-icon"
             class="absolute right-0 bottom-0 opacity-70 lg:w-[200px] md:w-[100px] w-[60px]"
           />
-          <button
-            class="sm:mt-10 mt-0 border border-purple-400 px-6 py-2 rounded-full font-bold"
-          >
-            More Praise
-          </button>
+          <div class="sm:mt-10 mt-0 flex justify-center">
+            <img
+              class="cursor-pointer"
+              src="/source/images/buttons/more-praise.svg"
+              alt="More Praise"
+            />
+          </div>
         </div>
         <!-- <div
           class="bg-gray-50 p-8 rounded-sm border border-gray-100 text-center"
@@ -148,14 +170,16 @@
             alt="gear-icon"
             class="absolute left-0 bottom-0 opacity-70 lg:w-[200px] md:w-[100px] w-[60px]"
           />
-          <h1 class="text-xl text-center capitalize my-4">
+          <p class="text-[28px] text-center capitalize tracking-tighter">
             Event Planning In Control
-          </h1>
-          <button
-            class="border border-purple-400 px-6 py-2 rounded-full font-bold"
-          >
-            How It Works
-          </button>
+          </p>
+          <div class="sm:mt-10 mt-0 flex justify-center">
+            <img
+              class="cursor-pointer"
+              src="/source/images/buttons/how-it-works.svg"
+              alt="How it works"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -165,18 +189,25 @@
       class="relative flex items-center justify-center h-[600px] overflow-hidden"
     >
       <div
-        class="absolute top-10 text-center leading-tight z-30 p-5 text-2xl text-white"
+        class="absolute top-4 text-center leading-tight z-30 text-2xl text-white"
       >
-        <p>MTA IS</p>
-        <p class="md:text-7xl sm:text-5xl font-[100]">
-          TOTALLY <strong> OUT THERE </strong>
+        <p class="font-goth-xlight">MTA IS</p>
+        <p class="md:text-7xl sm:text-5xl font-goth-xlight">
+          TOTALLY <span class="font-goth-book"> OUT THERE </span>
         </p>
       </div>
-      <button
+      <!-- <button
         class="absolute bottom-10 z-30 text-white border border-amber-600 px-6 py-2 rounded-full font-bold bg-gradient-to-r from-neutral-900 to-neutral-700"
       >
         Our Face-to-Face Expertise
-      </button>
+      </button> -->
+      <div class="sm:mt-10 mt-0 flex justify-center absolute bottom-10 z-30">
+        <img
+          class="cursor-pointer"
+          src="/source/images/buttons/expertise.svg"
+          alt="How it works"
+        />
+      </div>
       <video
         autoplay
         loop
@@ -192,20 +223,72 @@
 
     <section class="flex flex-col justify-center">
       <div
-        class="relative top-10 text-center leading-tight z-30 p-5 text-2xl uppercase mb-12"
+        class="text-center leading-tight z-30 p-5 mt-4 text-2xl uppercase -z-50"
       >
-        <p>MTA IS</p>
-        <p class="md:text-7xl sm:text-5xl font-[100]">
-          WORKING ON <strong> OUR CORE </strong>
+        <p class="font-goth-xlight">MTA IS</p>
+        <p class="text-5xl font-goth-xlight">
+          WORKING ON <span class="font-goth-book"> OUR CORE </span>
           (VALUES)
         </p>
       </div>
+
       <div class="lg:flex hidden flex flex-wrap justify-between">
-        <img src="/source/images/common/carousel-img-1.png" width="200" />
-        <img src="/source/images/common/carousel-img-2.png" width="200" />
-        <img src="/source/images/common/carousel-img-3.png" width="200" />
-        <img src="/source/images/common/carousel-img-4.png" width="200" />
-        <img src="/source/images/common/carousel-img-5.png" width="200" />
+        <div>
+          <img
+            src="/source/images/common/carousel-img-1.png"
+            class="object-contain"
+            width="250"
+          />
+          <p class="font-goth-xlight uppercase text-center mt-4">
+            CREATIVELY AGILE
+          </p>
+        </div>
+        <div>
+          <div class="flex items-center h-[190px]">
+            <img
+              src="/source/images/common/carousel-img-2.png"
+              class="object-contain"
+              width="250"
+            />
+          </div>
+          <p class="font-goth-xlight uppercase text-center mt-4">
+            TEAMING WITH TRUST
+          </p>
+        </div>
+        <div>
+          <img
+            src="/source/images/common/carousel-img-3.png"
+            class="object-contain"
+            width="250"
+          />
+          <p class="font-goth-xlight uppercase text-center mt-4">
+            TALENT EMPOWERED
+          </p>
+        </div>
+        <div>
+          <div class="flex items-center">
+            <img
+              src="/source/images/common/carousel-img-4.png"
+              class="object-contain"
+              width="250"
+            />
+          </div>
+          <p class="font-goth-xlight uppercase text-center mt-4">
+            CLARITY OF CHARACTER
+          </p>
+        </div>
+        <div>
+          <div class="h-[368px]">
+            <img
+              src="/source/images/common/carousel-img-5.png"
+              class="object-contain"
+              width="250"
+            />
+          </div>
+          <p class="font-goth-xlight uppercase text-center mt-4">
+            SERVICE WITH SOUL
+          </p>
+        </div>
       </div>
 
       <div
@@ -350,17 +433,20 @@
           </span>
         </button>
       </div>
-      <button
-        class="mt-8 mb-3 w-60 mx-auto bottom-10 z-30 border border-amber-600 px-6 py-2 rounded-full font-bold bg-gradient-to-r from-gray-200 to-gray-100"
-      >
-        What We Believe & Why
-      </button>
+
+      <div class="mt-4 flex justify-center">
+        <img
+          class="cursor-pointer"
+          src="/source/images/buttons/believe-&-why.svg"
+          alt="How it works"
+        />
+      </div>
     </section>
 
     <!-- Fifth Section Events -->
-    <section class="grid grid-cols-1 lg:grid-cols-2 gap-2 h-screen">
+    <section class="grid grid-cols-1 lg:grid-cols-2 sm:gap-2 gap-8 mt-16 pb-8">
       <div
-        class="bg-cover bg-no-repeat"
+        class="flex flex-col bg-cover bg-no-repeat"
         style="
           background-image: url('/source/images/common/Blog Widget.png');
           height: 400px;
@@ -369,8 +455,8 @@
         <div
           class="relative top-10 text-center leading-tight z-30 p-5 text-2xl text-white"
         >
-          <p class="text-2xl text-gray-200 font-[100]">
-            MTA IS<strong> UP ON CURRENT EVENTS </strong>
+          <p class="text-2xl text-gray-200 font-goth-xlight">
+            MTA IS<span class="font-goth-book"> UP ON CURRENT EVENTS </span>
           </p>
         </div>
         <div
@@ -382,48 +468,11 @@
                 src="/source/images/common/Ellipse 1.png"
                 alt="ellipse-icon"
               />
-            </div>
-            <div class="col-span-3">
-              <h1 class="text-xl font-semibold mb-4">
-                How to Plan an Incentive Trip on a Limited Budget
-              </h1>
-              <p>
-                Incentive trips are a smart, essential investment for any
-                company, including major corporations and small businesses
-                alike. Offering incentive trips for employees...
-              </p>
-            </div>
-          </div>
-        </div>
-        <button
-          class="relative top-12 border-cyan-600 px-6 py-2 rounded-full font-bold bg-gradient-to-r from-neutral-900 to-neutral-700 text-white"
-        >
-          More From Our Blog
-        </button>
-      </div>
-
-      <div
-        class="bg-cover bg-no-repeat"
-        style="
-          background-image: url('/source/images/common/Blog Widget.png');
-          height: 400px;
-        "
-      >
-        <div
-          class="relative top-10 text-center leading-tight z-30 p-5 text-2xl text-white"
-        >
-          <p class="text-2xl text-gray-200 font-[100]">
-            MTA IS<strong> UP ON CURRENT EVENTS </strong>
-          </p>
-        </div>
-        <div
-          class="relative p-6 top-10 mx-auto bg-neutral-900/90 rounded-lg max-w-[500px] h-auto text-white"
-        >
-          <div class="grid grid-cols-4">
-            <div class="col-span-1">
               <img
-                src="/source/images/common/success-stories-icon.png"
-                alt="ellipse-icon"
+                src="/source/images/common/read-icon.png"
+                alt="read-icon"
+                width="40"
+                class="absolute justify-center items-center"
               />
             </div>
             <div class="col-span-3">
@@ -438,22 +487,76 @@
             </div>
           </div>
         </div>
-        <button
-          class="relative top-12 border-cyan-600 px-6 py-2 rounded-full font-bold bg-gradient-to-r from-neutral-900 to-neutral-700 text-white"
+        <!-- <button
+          class="relative mx-auto top-12 border-cyan-600 px-6 py-2 rounded-full font-bold bg-gradient-to-r from-neutral-900 to-neutral-700 text-white"
         >
-          More Success Stories
-        </button>
+          More From Our Blog
+        </button> -->
+        <div class="mt-12 flex justify-center">
+          <img
+            class="cursor-pointer"
+            src="/source/images/buttons/from-our-blog.svg"
+            alt="How it works"
+          />
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col bg-cover bg-no-repeat"
+        style="
+          background-image: url('/source/images/common/Success Story.png');
+          height: 400px;
+        "
+      >
+        <div
+          class="relative top-10 text-center leading-tight z-30 p-5 text-2xl text-white"
+        >
+          <p class="text-2xl text-gray-200 font-goth-xlight">
+            MTA IS<span class="font-goth-book"> A SUCCESS STORYTELER </span>
+          </p>
+        </div>
+        <div
+          class="relative p-6 top-10 mx-auto bg-neutral-900/90 rounded-lg max-w-[500px] h-auto text-white"
+        >
+          <div class="grid grid-cols-4">
+            <div class="col-span-1">
+              <img
+                src="/source/images/common/Ellipse 2.png"
+                alt="ellipse-icon"
+              />
+            </div>
+            <div class="col-span-3">
+              <h1 class="text-xl font-semibold mb-4">
+                Success Story: Icelandic Incentive Trip
+              </h1>
+              <p>
+                The event: A distinctive incentive trip for a company&apos;s
+                25th anniversary celebration with the goal of bringing a global
+                team of 43 members together to connect and...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 flex justify-center">
+          <img
+            class="cursor-pointer"
+            src="/source/images/buttons/success-stories.svg"
+            alt="How it works"
+          />
+        </div>
       </div>
     </section>
 
     <!-- Section6 Attending to their needs -->
-    <section class="flex flex-col">
-      <div class="flex flex-col flex-wrap text-center">
-        <p>MTA IS</p>
-        <h1 class="text-4xl font-[100]">
-          (ATTEND)ING TO THEIR <strong> NEEDS </strong>
-        </h1>
-        <p class="text-lg">a new attendee experience is coming...</p>
+    <section class="flex flex-col mt-12">
+      <div class="flex flex-col flex-wrap text-center mx-8">
+        <p class="font-goth-xlight">MTA IS</p>
+        <p class="text-6xl font-goth-xlight">
+          (ATTEND)ING TO THEIR <span class="font-goth-book"> NEEDS </span>
+        </p>
+        <p class="text-xl font-goth-xlight">
+          a new attendee experience is coming...
+        </p>
       </div>
       <!-- <div
         class="bg-contain bg-no-repeat"
@@ -464,30 +567,38 @@
       ></div> -->
       <img
         src="/source/images/common/phone-bg-image.png"
-        class="bg-contain bg-no-repeat"
+        class="bg-contain bg-no-repeat sm:mb-0 mb-6"
         alt="phone-bg-image"
       />
 
-      <button
+      <!-- <button
         class="mx-auto relative sm:bottom-16 rounded-full border border-amber-500 px-6 py-2 bg-zinc-100 font-bold"
       >
         Get Notified
-      </button>
+      </button> -->
+      <div class="relative sm:bottom-16 flex justify-center">
+        <img
+          class="cursor-pointer"
+          src="/source/images/buttons/get-notified.svg"
+          alt="Get notified"
+        />
+      </div>
     </section>
 
     <!-- Section7 Footer -->
 
     <footer
-      class="bg-[#FAFAFA] pt-16 pb-8 px-8 flex flex-col justify-center items-center"
+      class="bg-[#FAFAFA] pt-16 pb-8 px-8 flex flex-col justify-center items-center mt-6"
     >
       <div
         class="flex flex-col justify-center items-center text-center text-gray-800 mb-6 p-6"
       >
-        <p className="mb-[24px] text-[24px]">
-          MTA IS a WBENC-certified, full-service corporate event planning
-          company in business since 1997. We deliver exceptional experiences for
-          face-to-face, virtual and hybrid meetings that exceed expectations
-          through a combination of personalized expertise & tailored solutions.
+        <p class="mb-[24px] text-[20px] font-goth-xlight">
+          <span class="font-goth-book">MTA IS</span> a WBENC-certified,
+          full-service corporate event planning company in business since 1997.
+          We deliver exceptional experiences for face-to-face, virtual and
+          hybrid meetings that exceed expectations through a combination of
+          personalized expertise & tailored solutions.
         </p>
       </div>
 
@@ -500,47 +611,59 @@
 
         <!-- right -->
         <div class="col-span-2">
-          <div class="grid grid-rows-2 grid-flow-col gap-4">
+          <div class="grid grid-rows-3 sm:grid-rows-2 grid-flow-col gap-8">
             <div class="flex flex-col">
-              <p>Services</p>
+              <p class="font-bold">Services</p>
               <p>Face to Face</p>
               <p>Virtual</p>
               <p>Hybrid</p>
             </div>
             <div class="flex flex-col">
-              <p>Services</p>
-              <p>Face to Face</p>
-              <p>Virtual</p>
-              <p>Hybrid</p>
+              <p class="font-bold">About</p>
+              <p>Who We Are</p>
+              <p>Leadership</p>
+              <p>Core Values</p>
+              <p>Testimonials</p>
+              <p>FAQs</p>
             </div>
             <div class="flex flex-col">
-              <p>Services</p>
-              <p>Face to Face</p>
-              <p>Virtual</p>
-              <p>Hybrid</p>
+              <p class="font-bold">Products</p>
+              <p>EPIC</p>
+              <p>Attend</p>
+              <p>VALT's</p>
             </div>
             <div class="flex flex-col">
-              <p>Services</p>
-              <p>Face to Face</p>
-              <p>Virtual</p>
-              <p>Hybrid</p>
+              <p class="font-bold">Blog</p>
+              <p>Videos</p>
+              <p>Success Stories</p>
+              <p>News & Press</p>
             </div>
             <div class="flex flex-col">
-              <p>Services</p>
-              <p>Face to Face</p>
-              <p>Virtual</p>
-              <p>Hybrid</p>
+              <p class="font-bold">Subscribe</p>
+              <input
+                class="bg-gray-200 outline-none border-0 p-3 max-w-[320px]"
+                type="email"
+                placeholder="Enter your email"
+              />
+              <p>
+                Join our newsletter to stay up to date on news <br />
+                and industry insights.
+              </p>
             </div>
             <div class="flex flex-col">
-              <p>Services</p>
-              <p>Face to Face</p>
-              <p>Virtual</p>
-              <p>Hybrid</p>
+              <p class="font-bold">Contact</p>
+              <p>General</p>
+              <p>Careers</p>
             </div>
           </div>
         </div>
       </div>
     </footer>
+    <div class="my-12">
+      <p class="text-xs text-center">
+        &copy; 2023 Miller Tanner Associates. All rights reserved.
+      </p>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
   </body>
