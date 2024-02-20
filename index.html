@@ -575,28 +575,20 @@
         <p class="text-6xl font-goth-xlight">
           (ATTEND)ING TO THEIR <span class="font-goth-book"> NEEDS </span>
         </p>
-        <p class="text-xl font-goth-xlight">
-          a new attendee experience is coming...
+        <p
+          class="relative left-0 right-0 sm:top-0 top-[220px] sm:mb-0 sm:text-xl text-3xl font-goth-xlight"
+        >
+          a new attendee <br class="flex sm:hidden" />
+          experience is coming...
         </p>
       </div>
-      <!-- <div
-        class="bg-contain bg-no-repeat"
-        style="
-          background-image: url('/source/images/phone-bg-image.png');
-          height: 400px;
-        "
-      ></div> -->
+
       <img
         src="/source/images/common/phone-bg-image.png"
-        class="bg-contain bg-no-repeat sm:mb-0 mb-6"
+        class="bg-contain bg-no-repeat sm:mb-0 mb-24"
         alt="phone-bg-image"
       />
 
-      <!-- <button
-        class="mx-auto relative sm:bottom-16 rounded-full border border-amber-500 px-6 py-2 bg-zinc-100 font-bold"
-      >
-        Get Notified
-      </button> -->
       <div class="relative sm:bottom-16 flex justify-center">
         <img
           class="cursor-pointer"
@@ -609,7 +601,7 @@
     <!-- Section7 Footer -->
 
     <footer
-      class="bg-[#FAFAFA] pt-16 pb-8 px-8 flex flex-col justify-center items-center mt-6"
+      class="bg-[#FAFAFA] w-full h-full pt-16 pb-32 px-8 flex flex-col justify-center items-center mt-6"
     >
       <div
         class="flex flex-col justify-center items-center text-center text-gray-800 mb-6 p-6"
@@ -624,14 +616,20 @@
       </div>
 
       <!-- main -->
-      <div class="w-full grid sm:grid-cols-3 grid-cols-2">
+      <div
+        class="w-full grid sm:grid-cols-3 grid-cols-2 flex justify-center items-center"
+      >
         <!-- left -->
-        <div class="col-span-1 flex justify-center items-center mx-auto">
-          <img src="/source//images/common/mta-logo.png" alt="mta-logo" />
+        <div class="col-span-1 w-full mb-8">
+          <img
+            src="/source//images/common/mta-logo.png"
+            class=""
+            alt="mta-logo"
+          />
         </div>
 
         <!-- right -->
-        <div class="col-span-2">
+        <div class="col-span-2 relative">
           <div class="grid grid-rows-3 sm:grid-rows-2 grid-flow-col gap-8">
             <div class="flex flex-col">
               <p class="font-bold">Services</p>
@@ -659,18 +657,23 @@
               <p>Success Stories</p>
               <p>News & Press</p>
             </div>
-            <div class="flex flex-col">
+            <div class="flex flex-col sm:static absolute top-[470px]">
               <p class="font-bold">Subscribe</p>
-              <input
-                class="bg-gray-200 outline-none border-0 p-3 max-w-[320px]"
-                type="email"
-                placeholder="Enter your email"
-              />
+              <div class="flex items-center outline-none">
+                <input
+                  class="bg-gray-200 outline-none border-0 p-3"
+                  type="email"
+                  placeholder="Enter your email"
+                />
+                <img src="/source/images/buttons/submit-button.svg" class="bg-gray-200 py-[14.5px] px-6 cursor-pointer" alt="submit-button">
+                <!-- <p class="bg-gray-200 py-3 px-12 cursor-pointer">test</p> -->
+              </div>
               <p>
                 Join our newsletter to stay up to date on news <br />
                 and industry insights.
               </p>
             </div>
+
             <div class="flex flex-col">
               <p class="font-bold">Contact</p>
               <p>General</p>
